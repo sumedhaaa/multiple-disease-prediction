@@ -100,9 +100,9 @@ if authentication_status:
     
     
      
-    diabetes_model=pickle.load(open('C:/Users/Hp/Desktop/Multiple_Disease_Prediction/model/diabetes_model.sav','rb'))
-    heart_disease_model=pickle.load(open('C:/Users/Hp/Desktop/Multiple_Disease_Prediction/model/heart_disease_model.sav','rb'))
-    parkinsons_model=pickle.load(open('C:/Users/Hp/Desktop/Multiple_Disease_Prediction/model/parkinsons_model.sav','rb'))
+    diabetes_model=pickle.load(open('model/diabetes_model.sav','rb'))
+    heart_disease_model=pickle.load(open('model/heart_disease_model.sav','rb'))
+    parkinsons_model=pickle.load(open('model/parkinsons_model.sav','rb'))
     with st.sidebar:
         selected = option_menu(
             menu_title=None,

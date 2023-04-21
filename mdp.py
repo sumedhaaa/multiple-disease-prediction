@@ -71,7 +71,7 @@ if authentication_status==False:
                 password=st.text_input("Enter password",type='password')
             if st.button("Submit"):
                 st.success("Data Saved Successfully. Please log in now")
-                db.insert(fname, lname, username, email, password,-1,-1,0)
+                db.insert(fname, lname, username, email, password,-1,-1,-1)
 if authentication_status==None:
     st.text("")
     st.text("")
@@ -92,7 +92,7 @@ if authentication_status==None:
                 password=st.text_input("Enter password",type='password')
             if st.button("Submit"):
                 st.success("Data Saved Successfully. Please log in now")
-                db.insert(fname, lname, username, email, password,0,0,0)
+                db.insert(fname, lname, username, email, password,-1,-1,-1)
 if authentication_status:
 
      #loading the saved model

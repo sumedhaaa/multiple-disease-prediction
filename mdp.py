@@ -216,7 +216,7 @@ if authentication_status:
         
         
         if st.button('Heart Disease Test Result'):
-            heart_prediction=heart_disease_model.predict([[age,sex,cp,trestbps,chol,fbs,restecg,thalch,exang,oldpeak,slope,ca,thal]])
+            heart_prediction=heart_disease_model.predict([[age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal]])
             #print(diab_prediction[0])
             st.success(heart_prediction[0])
             if heart_prediction[0]==0:

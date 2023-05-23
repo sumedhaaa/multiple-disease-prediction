@@ -196,6 +196,18 @@ if authentication_status:
             fbs=st.text_input('Fasting Blood Sugar > 120 mg/dL')
         with col1:
             restecg=st.text_input('Resting Electrocardiography results')
+        with col2:
+            thalach=st.text_input('Maximum heart rate achieved')
+        with col3:
+            exang=st.text_input('Exercise Induced angin')
+        with col1:
+            oldpeak=st.text_input('ST depression induced by exercise')
+        with col2:
+            slope=st.text_input('Slope of the peak exercise ST segment')
+        with col3:
+            ca=st.text_input('Major vessels coloured by flourosopy')
+        with col1:
+            thal=st.text_input('thal: 0=normal; 1=fixed defect; 2=reversable defect')
         
         #code for prediction
         heart_diagnosis=''
@@ -204,7 +216,7 @@ if authentication_status:
         
         
         if st.button('Heart Disease Test Result'):
-            heart_prediction=heart_disease_model.predict([[age,sex,cp,trestbps,chol,fbs,restecg]])
+            heart_prediction=heart_disease_model.predict([[age,sex,cp,trestbps,chol,fbs,restecg,thalch,exang,oldpeak,slope,ca,thal]])
             #print(diab_prediction[0])
             st.success(heart_prediction[0])
             if heart_prediction[0]==0:
